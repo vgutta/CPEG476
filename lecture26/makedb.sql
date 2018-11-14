@@ -1,0 +1,11 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE users (id integer primary key autoincrement, name text, password text);
+INSERT INTO "users" VALUES(1,'admin','l,kmjnhbgv');
+INSERT INTO "users" VALUES(2,'andy','bananasalmon');
+CREATE TABLE messages (sender text, receiver text, message text);
+INSERT INTO "messages" VALUES('1','2','welcome to Cyberdyne new hire');
+INSERT INTO "messages" VALUES('2','1','glad to be here');
+DELETE FROM sqlite_sequence;
+INSERT INTO "sqlite_sequence" VALUES('users',2);
+COMMIT;
